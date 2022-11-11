@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Card from "./card/card.js";
 import Header from "../components/header/header.js";
+import NotificationList from "../components/notificationsList/notificationsList.js";
 
 import "../styles/App.scss";
 
@@ -14,7 +14,7 @@ function App() {
         isNotification={isNotification}
         setIsNotification={setIsNotification}
       />
-      <Card isNotification={isNotification} />
+      <NotificationList isNotification={isNotification} />
     </div>
   );
 }

@@ -1,16 +1,17 @@
+import "../../styles/header.scss";
 const Header = ({ isNotification, setIsNotification }) => {
   const markHasRead = () => {
     setIsNotification(false);
   };
   return (
-    <header className="App_header">
-      <div>
-        <span className="App_header_title">
+    <header className="header">
+      <div className="header_container">
+        <div className="header_title">
           Notification{isNotification ? "s" : ""}
-        </span>
-        <span className="App_header_number">{isNotification ? "3" : ""}</span>
+        </div>
+        <div className="header_number">{isNotification ? "3" : ""}</div>
       </div>
-      <span className="App_header_read" onClick={markHasRead}>
+      <span className="header_read" onClick={markHasRead}>
         Mark all as read
       </span>
     </header>
